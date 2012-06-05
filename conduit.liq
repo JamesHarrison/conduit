@@ -29,7 +29,7 @@ backup_source = skip_blank(threshold=-35.,length=3.,backup_source)
 takeover_source = input.harbor("backup-harbor",port=harbor_port,password=harbor_password)
 
 # Set up our backup for ALSA
-infallible_alsa = fallback(track_sensitive=false,[alsa, backup_source])
+infallible_alsa = fallback(track_sensitive=false,[soundcard_source, backup_source])
 # And finally let our takeover, er, takeover.
 source = fallback(track_sensitive=false, [takeover_source, infallible_alsa])
 
