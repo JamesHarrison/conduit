@@ -1,0 +1,48 @@
+
+# Conduit Configuration
+
+# This is not an executable Liquidsoap file!
+# (Well, it is, it just won't do anything)
+
+## COPY TO configuration.liq BEFORE EDITING
+
+# Icecast server
+stream_host = "my.icecast.server"
+stream_port = 8000
+stream_password = "somepassword"
+stream_mount_prefix = "live-"
+
+# Basic metadata
+stream_url = "http://www.insanityradio.com/"
+stream_name = "Insanity Radio 103.2 FM"
+stream_description = "Your community radio station"
+stream_genre = "Community Radio"
+
+# Harbor - The 'let me take over remotely' input
+harbor_port = 8090
+harbor_password = "somethingverydifficulttoguess"
+
+# Enabled outputs
+
+# First, overall on/offs - these override granular settings
+enable_mp3 = true
+enable_vorbis = true
+enable_aac = true
+enable_aacplus = true
+enable_flac = true
+
+enable_mp3_320k = true
+enable_mp3_192k = true
+enable_mp3_96k = true
+
+enable_aacplus_64k = true
+enable_aacplus_32k = true
+
+enable_aac_192k = true
+enable_aac_128k = true
+enable_aac_96k = true
+enable_aac_64k = true
+enable_aac_32k = true
+
+enable_vorbis_high = true
+enable_vorbis_low = true
