@@ -55,7 +55,7 @@ if (enable_mp3 == true) then
   if (enable_mp3_320k == true) then
     output.icecast(%mp3.cbr(bitrate=320, samplerate=48000),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}320k.mp3",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}320k.mp3",
       name = "#{quote(stream_name)} 320k MP3 48kHz",
       genre = stream_genre,
       timeout = 10.0,
@@ -66,7 +66,7 @@ if (enable_mp3 == true) then
   if (enable_mp3_192k == true) then
     output.icecast(%mp3.cbr(bitrate=192, samplerate=44100),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}192k.mp3",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}192k.mp3",
       name = "#{quote(stream_name)} 192k MP3",
       genre = stream_genre,
       timeout = 10.0,
@@ -77,7 +77,7 @@ if (enable_mp3 == true) then
   if (enable_mp3_96k == true) then
     output.icecast(%mp3.cbr(bitrate=96, samplerate=44100),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}96k.mp3",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}96k.mp3",
       name = "#{quote(stream_name)} 96k MP3",
       genre = stream_genre,
       timeout = 10.0,
@@ -94,7 +94,7 @@ if (enable_aac) then
   if (enable_aac_192k == true) then
     output.icecast(%aac(bitrate=192, channels=2, samplerate=44100, adts=true),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}192k.aac",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}192k.aac",
       name = "#{quote(stream_name)} 192k AAC",
       genre = stream_genre,
       timeout = 10.0,
@@ -105,7 +105,7 @@ if (enable_aac) then
   if (enable_aac_128k == true) then
     output.icecast(%aac(bitrate=128, channels=2, samplerate=44100, adts=true),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}128k.aac",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}128k.aac",
       name = "#{quote(stream_name)} 128k AAC",
       genre = stream_genre,
       timeout = 10.0,
@@ -116,7 +116,7 @@ if (enable_aac) then
   if (enable_aac_96k == true) then
     output.icecast(%aac(bitrate=96, channels=2, samplerate=44100, adts=true),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}96k.aac",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}96k.aac",
       name = "#{quote(stream_name)} 96k AAC",
       genre = stream_genre,
       timeout = 10.0,
@@ -127,7 +127,7 @@ if (enable_aac) then
   if (enable_aac_64k == true) then
     output.icecast(%aac(bitrate=64, channels=2, samplerate=44100, adts=true),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}64k.aac",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}64k.aac",
       name = "#{quote(stream_name)} 64k AAC",
       genre = stream_genre,
       timeout = 10.0,
@@ -138,7 +138,7 @@ if (enable_aac) then
   if (enable_aac_32k == true) then
     output.icecast(%aac(bitrate=32, channels=2, samplerate=44100, adts=true),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}32k.aac",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}32k.aac",
       name = "#{quote(stream_name)} 32k AAC",
       genre = stream_genre,
       timeout = 10.0,
@@ -150,7 +150,7 @@ end
 if (enable_flac == true) then
   output.icecast(%ogg(%flac(compression=7, channels=2, samplerate=48000, bits_per_sample=16)),
     host = stream_host, port = stream_port,
-    password = stream_password, mount = "#{quote(live)}flac.ogg",
+    password = stream_password, mount = "#{quote(stream_mount_prefix)}flac.ogg",
     name = "#{quote(stream_name)} FLAC 48kHz",
     genre = stream_genre,
     timeout = 10.0,
@@ -162,7 +162,7 @@ if (enable_vorbis == true) then
   if (enable_vorbis_high == true) then
     output.icecast(%ogg(%vorbis(quality=0.9, channels=2, samplerate=44100)),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}high-vbr.ogg",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}high-vbr.ogg",
       name = "#{quote(stream_name)} Vorbis High VBR",
       genre = stream_genre,
       timeout = 10.0,
@@ -173,7 +173,7 @@ if (enable_vorbis == true) then
   if (enable_vorbis_low == true) then
     output.icecast(%ogg(%vorbis(quality=0.3, channels=2, samplerate=44100)),
       host = stream_host, port = stream_port,
-      password = stream_password, mount = "#{quote(live)}low-vbr.ogg",
+      password = stream_password, mount = "#{quote(stream_mount_prefix)}low-vbr.ogg",
       name = "#{quote(stream_name)} Vorbis Low VBR",
       genre = stream_genre,
       timeout = 10.0,
