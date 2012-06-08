@@ -6,6 +6,8 @@
 
 ## COPY TO configuration.liq BEFORE EDITING
 
+log_file_path = "conduit.log"
+
 # Icecast server
 stream_host = "my.icecast.server"
 stream_port = 8000

@@ -9,6 +9,8 @@
 set("server.telnet", true)
 set("server.telnet.bind_addr","0.0.0.0")
 set("server.telnet.port",1234)
+set("log.file.path", log_file_path)
+set("log.stdout", true)
 set("harbor.bind_addr","0.0.0.0")
 
 # Input from ALSA
