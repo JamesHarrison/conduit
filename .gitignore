@@ -1,3 +1,6 @@
 configuration.liq
-backup-material/*
+backup-material/jingles/*
+backup-material/**/*
 conduit.log
+!.gitignore
+!.gitkeep

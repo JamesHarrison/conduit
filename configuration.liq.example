@@ -30,9 +30,10 @@ harbor_password = "somethingverydifficulttoguess"
 enable_mp3 = true
 enable_vorbis = true
 enable_aac = true
-enable_aacplus = true
-enable_flac = true
+enable_aacplus = false
+enable_flac = false
 
+# Now bitrate specific on/offs; these are only enabled if enabled here and their overall type is also enabled
 enable_mp3_320k = true
 enable_mp3_192k = true
 enable_mp3_96k = true
@@ -41,10 +42,10 @@ enable_aacplus_64k = true
 enable_aacplus_32k = true
 
 enable_aac_192k = true
-enable_aac_128k = true
+enable_aac_128k = false
 enable_aac_96k = true
-enable_aac_64k = true
-enable_aac_32k = true
+enable_aac_64k = false
+enable_aac_32k = false
 
 enable_vorbis_high = true
 enable_vorbis_low = true
